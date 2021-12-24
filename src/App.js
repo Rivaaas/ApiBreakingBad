@@ -8,7 +8,6 @@ const Contenedor = styled.div`
   padding-top: 5rem;
   flex-direction: column;
 ` ;
-
 const Boton = styled.button`
   background: -webkit-linear-gradient(top left, #007d35 0%, #007d35 40%, #0f574e 100%);
   background-size: 300px;
@@ -26,6 +25,7 @@ const Boton = styled.button`
 `;
 
 
+
 function App() {
 
   // state de frases
@@ -36,23 +36,28 @@ function App() {
     const api = await fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
     const frase = await api.json()
     guardarFrase(frase[0]);
+
   }
 
- 
+
+  
 
   return (
-
     
     <Contenedor>
       
-      <Frase
-        frase={frase}
-      />
+
       <Boton
         onClick={consultarAPI}
       >
         Obtener Frase
       </Boton>
+
+      <div>
+      <Frase
+        frase={frase}
+      />
+      </div>
     </Contenedor>
   );
 }

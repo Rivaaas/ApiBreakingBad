@@ -33,8 +33,5 @@ body {
 
 
 .frase{
-  display: flex;
-  align-content: center;
-  padding-left: 50%;
-
+  padding-top: 10px;
 }
